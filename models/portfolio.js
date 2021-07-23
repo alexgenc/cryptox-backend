@@ -16,8 +16,9 @@ class Portfolio {
     const duplicateCheck = await db.query(
       `SELECT cryptocurrency
         FROM portfolio
-        WHERE cryptocurrency = $1
-      `, [cryptocurrency],
+        WHERE cryptocurrency = $1 AND
+              username = $2
+      `, [cryptocurrency, username],
     );
     
     // Throw error if username already exists

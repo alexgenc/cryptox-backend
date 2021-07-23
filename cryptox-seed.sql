@@ -16,4 +16,6 @@ VALUES ('testuser',
 
 INSERT INTO portfolio (username, cryptocurrency, quantity)
 VALUES ('testuser', 'bitcoin', '1'),
-       ('testuser', 'ethereum', '1')
+       ('testuser', 'ethereum', '1'),
+       ('testadmin', 'bitcoin', '5'),
+       ('testadmin', 'ethereum', '2')

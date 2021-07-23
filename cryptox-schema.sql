@@ -1,6 +1,6 @@
 
 CREATE TABLE users (
-  username VARCHAR(25) PRIMARY KEY,
+  username VARCHAR(25) NOT NULL PRIMARY KEY ,
   password TEXT NOT NULL,
   first_name TEXT NOT NULL,
   last_name TEXT NOT NULL,
@@ -10,8 +10,9 @@ CREATE TABLE users (
 );
 
 CREATE TABLE portfolio (
-  username VARCHAR(25) 
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(25) NOT NULL
     REFERENCES users ON DELETE CASCADE,
-  cryptocurrency VARCHAR(25) PRIMARY KEY,
-  quantity DECIMAL
+  cryptocurrency VARCHAR(25) NOT NULL,
+  quantity DECIMAL NOT NULL
 );
